@@ -1,24 +1,29 @@
 {
-  "name": "my-app",
+  "name": "frontend-flashcards",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "date-fns": "^2.11.1",
-    "gray-matter": "^4.0.2",
-    "next": "^11.0.0",
+    "next": "11.0.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "remark": "^12.0.0",
-    "remark-html": "^12.0.0"
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@types/node": "^16.3.3",
-    "@types/react": "^17.0.14",
+    "@types/react": "17.0.16",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-next": "11.0.1",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "typescript": "^4.3.5"
   }
 }
