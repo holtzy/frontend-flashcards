@@ -9,8 +9,6 @@ export const FlashcardDetails = (props: {flashcard: Flashcard}) => {
 
   const {name, description, img, sandbox} = props.flashcard
 
-  console.log("/flashcards/"+img)
-
   return (
     <div >
       <Head>
@@ -19,16 +17,18 @@ export const FlashcardDetails = (props: {flashcard: Flashcard}) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main >
-        <h1>{name}</h1>
-        <p>{description}</p>
+      <main className={styles.container}>
+        <h1 className={styles.title}>{name}</h1>
+        <div className={styles.description}><p>{description}</p></div>
 
-        <Image
-          src={"/flashcards/"+img}
-          alt="Your Name"
-          width={400}
-          height={300}
-        />
+        <div className={styles.imageContainer}>
+          <Image
+            src={"/flashcards/"+img}
+            alt="Your Name"
+            layout="fill"
+            className={styles.image}
+          />
+        </div>
       </main>
 
       <iframe src={sandbox}

@@ -8,6 +8,12 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
+        <link
+          rel="preload"
+          href="/fonts/virgil/Virgil.woff2"
+          as="font"
+          crossOrigin=""
+        />
         <title>Frontend Flashcards</title>
         <meta name="description" content="A set of flashcards to memorize all the core frontend development concepts" />
         <link rel="icon" href="/favicon.ico" />

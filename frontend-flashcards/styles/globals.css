@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Virgil";
+  src: url("/fonts/virgil/Virgil.woff2");
+}
+
 html,
 body {
   padding: 0;
