@@ -1,10 +1,16 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
+import Settings from '../components/Settings';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
+
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false)
+
   return (
     <div >
       <Head>
@@ -24,8 +30,17 @@ export default function Home() {
       </Head>
 
 
+      <Navbar
+        isSettingsOpen={isSettingsOpen}
+        setIsSettingsOpen={setIsSettingsOpen}
+      />
 
-
+      {isSettingsOpen &&
+        <Settings
+          isSettingsOpen={isSettingsOpen}
+          setIsSettingsOpen={setIsSettingsOpen}
+        />
+      }
 
       <div className={styles.landingContainer}>
         <h1 className={styles.title}>

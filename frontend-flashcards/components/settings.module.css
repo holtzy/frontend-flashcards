@@ -1,0 +1,50 @@
+.container {
+    position: fixed;
+    top: 40px;
+    right: 110px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.languageContainer {
+    display: flex;
+    align-items: center;
+}
+
+.levelContainer {
+    display: flex;
+    align-items: center;
+}
+
+.numberContainer {
+    margin-left: 8px;
+}
+
+.number {
+    font-size: 15px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.logo {
+    padding: 2px !important;
+    border-radius: 4px !important;
+    cursor: pointer;
+}
+
+.logoContainer {
+    margin-left: 8px;
+}
+
+.closeButton {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 0px;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
