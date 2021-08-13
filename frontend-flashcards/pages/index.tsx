@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Settings from '../components/Settings';
 import styles from '../styles/Home.module.css';
+import { getRandomCardUrl } from '../utils/utils';
 
 export default function Home() {
 
@@ -34,13 +35,13 @@ export default function Home() {
         isSettingsOpen={isSettingsOpen}
         setIsSettingsOpen={setIsSettingsOpen}
       />
-
       {isSettingsOpen &&
         <Settings
           isSettingsOpen={isSettingsOpen}
           setIsSettingsOpen={setIsSettingsOpen}
         />
       }
+      <Footer/>
 
       <div className={styles.landingContainer}>
         <h1 className={styles.title}>
@@ -51,26 +52,33 @@ export default function Home() {
           Read a few flashcards a day, and stop forgetting all the basics again and again
         </p>
 
-        <div>
+        <div className={styles.optionsContainer}>
           <Image
             src="/logo/typescript-logo.png"
             alt="Typescript Logo"
             className={styles.logo}
-            width={40}
-            height={40} />
+            width={30}
+            height={30} />
           <Image
             src="/logo/javascript-logo.png"
             alt="Javascript Logo"
             className={styles.logo}
-            width={40}
-            height={40} />
+            width={30}
+            height={30} />
           <Image
             src="/logo/CSS-logo.png"
             alt="Javascript Logo"
             className={styles.logo}
-            width={40}
-            height={40} />
+            width={30}
+            height={30} />
+          <p> | </p>
+          <Link href={getRandomCardUrl()}>
+            <div className={styles.button}>
+              Random
+            </div>
+          </Link>
         </div>
+
 
         <div className={styles.annotationTopLeft}>
           <p>132 flashcards currently available!</p>
@@ -84,44 +92,6 @@ export default function Home() {
             height={200} />
         </div>
       </div>
-
-
-
-
-
-
-      <div>
-        <div className={styles.grid}>
-          <Link href="cards/typescript-narrowing-with-typeof-flashcard">
-            <Image
-              src="/flashcards/ts_narrowing_typeof.png" // Route of the image file
-              alt="Your Name"
-              width={400}
-              height={300}
-            />
-          </Link>
-          <Image
-            src="/flashcards/ts_narrowing_typeof.png" // Route of the image file
-            alt="Your Name"
-            width={400}
-            height={300}
-          />
-          <Image
-            src="/flashcards/ts_narrowing_typeof.png" // Route of the image file
-            alt="Your Name"
-            width={400}
-            height={300}
-          />
-          <Image
-            src="/flashcards/ts_narrowing_typeof.png" // Route of the image file
-            alt="Your Name"
-            width={400}
-            height={300}
-          />
-        </div>
-      </div>
-
-      <Footer/>
     </div>
   );
 }

@@ -57,4 +57,24 @@
   left: 8%;
 }
 
+.optionsContainer {
+  display: flex;
+  align-items: center;
+}
 
+.button {
+  margin: 10px;
+}
+
+.button {
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #69b3a2;
+  border: none;
+  cursor: pointer;
+  opacity: .8;
+}
+
+.button:hover {
+  opacity: 1;
+}

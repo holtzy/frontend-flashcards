@@ -1,5 +1,5 @@
 import { FlashcardDetails } from '../../components/FlashcardDetails';
-import { flashcardList } from '../../types/flashcardList';
+import { flashcardList } from '../../utils/flashcardList';
 
 export default function TsNarrowingTypeOf() {
   const card = flashcardList.filter(card => card.name === "Narrowing with typeof")[0]

@@ -2,8 +2,14 @@ import styles from './flashcardDetails.module.css'
 
 import Head from "next/head";
 import Image from "next/image";
-import { Flashcard } from "../types/types";
+import { Flashcard } from "../utils/types";
 import Footer from './Footer';
+import Navbar from './Navbar';
+import { useCallback, useState } from 'react';
+import { throttle } from '../utils/utils';
+import { SandboxPanel } from './SandboxPanel';
+
+const MIN_INSPECTOR_HEIGHT_THRESHOLD = 200;
 
 export const FlashcardDetails = (props: {flashcard: Flashcard}) => {
 
@@ -17,33 +23,24 @@ export const FlashcardDetails = (props: {flashcard: Flashcard}) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.container}>
-        <h1 className={styles.title}>{name}</h1>
-        <div className={styles.description}><p>{description}</p></div>
+      <Navbar
+        isSettingsOpen={false}
+        setIsSettingsOpen={() => console.log("todo")}
+      />
 
-        <div className={styles.imageContainer}>
-          <Image
-            src={"/flashcards/"+img}
-            alt="Your Name"
-            layout="fill"
-            className={styles.image}
-          />
-        </div>
-      </main>
+      <h1 className={styles.title}>{name}</h1>
+      <div className={styles.description}><p>{description}</p></div>
 
-      <iframe src={sandbox}
-        style={{
-          width: '100%',
-          height: '500px',
-          border: "solid",
-          borderWidth: 2,
-          borderRadius: '4px',
-          overflow: 'hidden'
-        }}
-        allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-        sandbox="allow-forms allow-modals allow-popups allow-same-origin allow-scripts"
-      ></iframe>
+      <div className={styles.imageContainer}>
+        <Image
+          src={"/flashcards/"+img}
+          alt="Your Name"
+          layout="fill"
+          className={styles.image}
+        />
+      </div>
 
+      <SandboxPanel url={sandbox}/>
       <Footer/>
     </div>
   );
