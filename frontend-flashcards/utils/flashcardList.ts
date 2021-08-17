@@ -12,7 +12,7 @@ export const flashcardList: Flashcard[] = [
     level: 2,
     documentation: "https://www.typescriptlang.org/docs/handbook/2/narrowing.html",
     related: ["Narrowing with instanceof"],
-    img: "ts_narrowing_typeof.png",
+    img: "proto-fiche.png",
   },
   {
     name: "Narrowing with typeof",
