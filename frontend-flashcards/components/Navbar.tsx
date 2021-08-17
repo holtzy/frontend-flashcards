@@ -10,7 +10,7 @@ type NavbarProps = {
 export default function Navbar(props: NavbarProps) {
   return (
     <nav className={styles.container}>
-      <div>
+      <div className={styles.element}>
         <Link href="/">
           <Image
             src="/logo/FrontendFlashcardsLogo.png"
@@ -19,8 +19,14 @@ export default function Navbar(props: NavbarProps) {
             width={20}
             height={20} />
         </Link>
+      </div >
+      <div
+        className={styles.element}
+        onClick={() => props.setIsSettingsOpen(!props.isSettingsOpen)}
+      >
+          🔧
       </div>
-      <div onClick={() => props.setIsSettingsOpen(!props.isSettingsOpen)}>🔧</div>
     </nav>
   )
 }
+

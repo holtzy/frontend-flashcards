@@ -27,6 +27,7 @@ export const FlashcardDetails = (props: {flashcard: Flashcard}) => {
         setIsSettingsOpen={() => console.log("todo")}
       />
 
+      {/* Content */}
       <div className={styles.container}>
         <div className={styles.descriptionContainer}>
           <h1 className={styles.title}>{name}</h1>
@@ -45,10 +46,12 @@ export const FlashcardDetails = (props: {flashcard: Flashcard}) => {
         </div>
       </div>
 
-
+      {/* Right and Left arrows */}
+      <div className={styles.arrowLeft}>{"<-"}</div>
+      <div className={styles.arrowRight}>{"->"}</div>
 
       <SandboxPanel url={sandbox}/>
       <Footer/>
-    </div>
+    </div >
   );
 }

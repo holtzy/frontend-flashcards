@@ -60,3 +60,33 @@
 }
 
 
+
+/* Arrows */
+.arrowLeft {
+    position: fixed;
+    left: 8px;
+    top: 50%;
+    padding: 5px;
+    border-radius: 100%;
+    border: solid;
+    border-width: 1px;
+    opacity: .3;
+    cursor: pointer;
+}
+.arrowLeft:hover {
+    opacity: .8;
+}
+.arrowRight {
+    position: fixed;
+    right: 8px;
+    top: 50%;
+    padding: 5px;
+    border-radius: 100%;
+    border: solid;
+    border-width: 1px;
+    opacity: .3;
+    cursor: pointer;
+}
+.arrowRight:hover {
+    opacity: .8;
+}

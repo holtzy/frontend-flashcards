@@ -1,14 +1,18 @@
 .container {
-    position: fixed;
+    position: inline;
     top: 0px;
     left: 0px;
     width: 100vw;
     height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding-right: 100px;
-    padding-left: 100px;
-    padding-top: 20px;
+
+    display: flex;
+    align-items:center;
+    justify-content:flex-end;
+
     cursor:pointer
+}
+
+.element {
+    margin-left: 10px;
 }
