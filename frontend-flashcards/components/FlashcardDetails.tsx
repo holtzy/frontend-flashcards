@@ -7,6 +7,8 @@ import Footer from './Footer';
 import Navbar from './Navbar';
 import { useCallback, useState } from 'react';
 import { SandboxPanel } from './SandboxPanel';
+import { getRandomCardUrl } from '../utils/utils';
+import Link from 'next/link';
 
 const MIN_INSPECTOR_HEIGHT_THRESHOLD = 200;
 
@@ -48,7 +50,9 @@ export const FlashcardDetails = (props: {flashcard: Flashcard}) => {
 
       {/* Right and Left arrows */}
       <div className={styles.arrowLeft}>{"<-"}</div>
-      <div className={styles.arrowRight}>{"->"}</div>
+      <Link href={getRandomCardUrl()}>
+        <div className={styles.arrowRight}>{"->"}</div>
+      </Link>
 
       <SandboxPanel url={sandbox}/>
       <Footer/>
