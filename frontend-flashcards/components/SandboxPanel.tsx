@@ -69,12 +69,12 @@ export const SandboxPanel = (props: {url: string}) => {
 
       {/* Button to drag once it's open */}
       {inspectorHeight !== 0 &&
-        <div className={styles.dragButton} onMouseDown={onResizerMouseDown}>Drag Button</div>
+        <div className={styles.dragButton} onMouseDown={onResizerMouseDown}>...</div>
       }
 
       {/* Button to open when it's closed */}
       {inspectorHeight === 0 &&
-        <div className={styles.openButton} onClick={showGraphInspector}>Open Button</div>
+        <div className={styles.openButton} onClick={showGraphInspector}>+</div>
       }
 
     </div>

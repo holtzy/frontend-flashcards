@@ -9,25 +9,31 @@
 
 .dragButton {
     position: absolute;
-    left: 0px;
-    top: 0px;
-    margin-left: 50%;
-    bottom: 0px;
-    width: 100px;
-    background-color: red;
+    left: 50%;
+    line-height: 10px;
+    color: white;
+    top: 2px;
     cursor: pointer;
     text-align: center;
-    height: 20px;
+    border: solid;
+    border-color: grey;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .openButton {
     position: absolute;
     left: 50%;
+    line-height: 10px;
     bottom: 0px;
-    width: 100px;
-    background-color: green;
     cursor: pointer;
     text-align: center;
+    border: solid;
+    border-color: grey;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .resizer {
