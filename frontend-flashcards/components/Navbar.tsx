@@ -2,6 +2,7 @@ import styles from './navbar.module.css'
 import Image from 'next/image';
 import Link from 'next/link';
 import Button from './Button';
+import { getRandomCardUrl } from '../utils/utils';
 
 type NavbarProps = {
     isSettingsOpen: boolean;
@@ -25,7 +26,11 @@ export default function Navbar(props: NavbarProps) {
           SETTINGS
         </span>
         <span className={styles.item}>
-          <Button text="Show me a card"/>
+          <Button onClick={() => console.log("toto")}>
+            <Link href={getRandomCardUrl()}>
+              Show me a card
+            </Link>
+          </Button>
         </span>
       </div>
     </nav>

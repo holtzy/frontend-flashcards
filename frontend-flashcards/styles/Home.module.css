@@ -5,7 +5,7 @@ Section one: landing section
 ---
  */
 .landingSection {
-  padding: 0 0.5rem;
+  padding: 0 1rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -16,7 +16,7 @@ Section one: landing section
 .titleContainer {
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
+  align-items: flex-start;
   padding: 20px;
   min-width: 650px;
 }
@@ -31,6 +31,13 @@ Section one: landing section
 .flashcardOverview {
   max-width: 600px;
   min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.buttonNarrow {
+  margin-top: 30px;
+  display: none;
 }
 @media screen and (max-width: 992px) {
   .landingSection {
@@ -40,6 +47,18 @@ Section one: landing section
     text-align: center;
     min-width: 300px;
   }
+  .buttonWide {
+    display: none;
+  }
+  .buttonNarrow {
+    display: block;
+  }
+}
+.signature {
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  font-family: Virgil;
 }
 
 

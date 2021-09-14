@@ -8,6 +8,7 @@ import Settings from '../components/Settings';
 import styles from '../styles/Home.module.css';
 import { getRandomCardUrl } from '../utils/utils';
 import flashcardOverview from '../public/misc/flashcard-overview.png'
+import Button from '../components/Button';
 
 export default function Home() {
 
@@ -53,6 +54,13 @@ export default function Home() {
           <p className={styles.description}>
           Read a few flashcards a day, and stop forgetting all the basics again and again
           </p>
+          <div className={styles.buttonWide}>
+            <Button onClick={() => {}}>
+              <Link href={getRandomCardUrl()}>
+              Show me a card
+              </Link>
+            </Button>
+          </div>
         </div>
 
         <div className={styles.flashcardOverview}>
@@ -61,6 +69,17 @@ export default function Home() {
             alt="Overview of the flashcards"
             className={""}
           />
+          <div className={styles.buttonNarrow}>
+            <Button onClick={() => {}}>
+              <Link href={getRandomCardUrl()}>
+                Show me a card
+              </Link>
+            </Button>
+          </div>
+        </div>
+
+        <div className={styles.signature}>
+          A project by <a href="https://www.yan-holtz.com">Yan Holtz</a>
         </div>
 
         {/* <div className={styles.optionsContainer}>

@@ -1,20 +1,21 @@
 .button {
-    margin: 10px;
-  }
+  border-radius: 8px;
+  padding: 10px;
+  background-color: var(--green-md);
+  border: none;
+  cursor: pointer;
+  opacity: 1;
+  color: white !important;
+  font-size: 17px;
+  padding-right: 18px;
+  padding-left: 18px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 
-  .button {
-    border-radius: 8px;
-    padding: 10px;
-    background-color: var(--blue-md);
-    border: none;
-    cursor: pointer;
-    opacity: 1;
-    color: white;
-    font-size: 17px;
-    padding-right: 18px;
-    padding-left: 18px;
-  }
-
-  .button:hover {
+.button:hover {
     opacity: .8;
-  }
+}
+
+.button a{
+  color: white;
+}
