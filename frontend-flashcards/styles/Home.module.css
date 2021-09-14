@@ -1,21 +1,25 @@
+
+/*
+---
+Section one: landing section
+---
+ */
 .landingSection {
   padding: 0 0.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   height: 90vh;
   background-color: #f8f9fa;
 }
-
 .titleContainer {
   display: flex;
   flex-direction: column;
   justify-content: baseline;
   padding: 20px;
+  min-width: 650px;
 }
-
 .title {
   margin: 0;
   line-height: 1.15;
@@ -24,11 +28,25 @@
   color: black;
   font-family: Roboto;
 }
-
 .flashcardOverview {
-  max-width: 500px;
+  max-width: 600px;
   min-width: 300px;
 }
+@media screen and (max-width: 992px) {
+  .landingSection {
+    flex-direction: column
+  }
+  .titleContainer {
+    text-align: center;
+    min-width: 300px;
+  }
+}
+
+
+
+
+
+
 
 .firstSection {
   height: 1000px;
