@@ -4,6 +4,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   height: 90vh;
   background-color: #f8f9fa;
 }
@@ -26,6 +27,7 @@
 
 .flashcardOverview {
   max-width: 500px;
+  min-width: 300px;
 }
 
 .firstSection {
@@ -33,12 +35,12 @@
 }
 
 .virgil {
-  font-family: virgil;
+  font-family: Virgil;
 }
 
 .description {
   max-width: 800px;
-  font-family: virgil;
+  font-family: Virgil;
   color: grey;
 }
 
@@ -53,7 +55,7 @@
 }
 
 .annotationTopLeft {
-  font-family: virgil;
+  font-family: Virgil;
   color: rgb(218, 141, 141);
   transform: rotate(-32deg);
   position: absolute;

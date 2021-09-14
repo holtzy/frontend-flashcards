@@ -18,7 +18,7 @@ export default function Home() {
       <Head>
         <link
           rel="preload"
-          href="/fonts/virgil/Virgil.woff2"
+          href="fonts/virgil/fg-virgil.ttf"
           as="font"
           crossOrigin=""
         />
