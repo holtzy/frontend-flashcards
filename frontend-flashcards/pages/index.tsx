@@ -7,6 +7,7 @@ import Navbar from '../components/Navbar';
 import Settings from '../components/Settings';
 import styles from '../styles/Home.module.css';
 import { getRandomCardUrl } from '../utils/utils';
+import flashcardOverview from '../public/misc/flashcard-overview.png'
 
 export default function Home() {
 
@@ -43,16 +44,26 @@ export default function Home() {
       }
       <Footer/>
 
-      <div className={styles.landingContainer}>
-        <h1 className={styles.title}>
+      <div className={styles.landingSection}>
+
+        <div className={styles.titleContainer}>
+          <h1 className={styles.title}>
           Learn & Memorize the core frontend dev concepts
-        </h1>
-
-        <p className={styles.description}>
+          </h1>
+          <p className={styles.description}>
           Read a few flashcards a day, and stop forgetting all the basics again and again
-        </p>
+          </p>
+        </div>
 
-        <div className={styles.optionsContainer}>
+        <div className={styles.flashcardOverview}>
+          <Image
+            src={flashcardOverview}
+            alt="Overview of the flashcards"
+            className={""}
+          />
+        </div>
+
+        {/* <div className={styles.optionsContainer}>
           <Image
             src="/logo/typescript-logo.png"
             alt="Typescript Logo"
@@ -77,20 +88,23 @@ export default function Home() {
               Random
             </div>
           </Link>
-        </div>
+        </div> */}
 
-
-        <div className={styles.annotationTopLeft}>
+        {/* <div className={styles.annotationTopLeft}>
           <p>132 flashcards currently available!</p>
-        </div>
-        <div className={styles.skateboard}>
+        </div> */}
+        {/* <div className={styles.skateboard}>
           <Image
             src="/drawing/skateboard.png"
             alt="Javascript Logo"
             className={styles.logo}
             width={200}
             height={200} />
-        </div>
+        </div> */}
+      </div>
+
+      <div className={styles.firstSection}>
+        <p>next</p>
       </div>
     </div>
   );
