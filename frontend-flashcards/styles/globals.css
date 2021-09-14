@@ -3,6 +3,24 @@
   src: url("/fonts/virgil/fg-virgil.ttf");
 }
 
+:root {
+  --pink-md: #F91992;
+
+  --purple-md: #6E82EE;
+
+  --green-md: #53C8B2;
+  --green-dark: #5B9F94;
+
+  --black-dark: #131212;
+  --black-md: #2B2B2B;
+
+  --white-light: #FFFFFF;
+
+  --blue-md: #3F9AFF;
+  --blue-dark: #3178C6;
+
+}
+
 html,
 body {
   padding: 0;

@@ -1,6 +1,7 @@
 import styles from './navbar.module.css'
 import Image from 'next/image';
 import Link from 'next/link';
+import Button from './Button';
 
 type NavbarProps = {
     isSettingsOpen: boolean;
@@ -10,21 +11,22 @@ type NavbarProps = {
 export default function Navbar(props: NavbarProps) {
   return (
     <nav className={styles.container}>
-      <div className={styles.element}>
-        <Link href="/">
-          <Image
-            src="/logo/FrontendFlashcardsLogo.png"
-            alt="Typescript Logo"
-            className={styles.logo}
-            width={20}
-            height={20} />
-        </Link>
-      </div >
-      <div
-        className={styles.element}
-        onClick={() => props.setIsSettingsOpen(!props.isSettingsOpen)}
-      >
-          🔧
+      <Link href="/">
+        <p className={styles.title}>Frontend Flashcards</p>
+      </Link>
+      <div>
+        <a className={styles.item} href="/">
+          ALL
+        </a>
+        <a className={styles.item} href="/">
+          ABOUT
+        </a>
+        <span className={styles.item} onClick={() => props.setIsSettingsOpen(!props.isSettingsOpen)}>
+          SETTINGS
+        </span>
+        <span className={styles.item}>
+          <Button text="Show me a card"/>
+        </span>
       </div>
     </nav>
   )

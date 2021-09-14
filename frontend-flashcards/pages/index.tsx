@@ -23,7 +23,7 @@ export default function Home() {
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@100@400@900&display=swap"
           rel="stylesheet"
         />
         <title>Frontend Flashcards</title>

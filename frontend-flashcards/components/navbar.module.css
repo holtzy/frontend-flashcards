@@ -1,18 +1,20 @@
 .container {
-    position: inline;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-    height: 40px;
-    padding-right: 100px;
-
     display: flex;
     align-items:center;
-    justify-content:flex-end;
-
-    cursor:pointer
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
-.element {
-    margin-left: 10px;
+.title {
+    font-family: Virgil;
+    color: var(--green-dark);
+}
+
+.item {
+    margin-left: 30px;
+    font-family: Roboto;
+    color: black;
+    font-size: 1rem;
+    font-weight: 100;
 }

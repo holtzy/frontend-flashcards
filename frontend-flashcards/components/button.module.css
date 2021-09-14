@@ -1,0 +1,20 @@
+.button {
+    margin: 10px;
+  }
+
+  .button {
+    border-radius: 8px;
+    padding: 10px;
+    background-color: var(--blue-md);
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    color: white;
+    font-size: 17px;
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .button:hover {
+    opacity: .8;
+  }
