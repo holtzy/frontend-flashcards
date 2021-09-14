@@ -14,7 +14,7 @@ const MIN_INSPECTOR_HEIGHT_THRESHOLD = 200;
 
 export const FlashcardDetails = (props: {flashcard: Flashcard}) => {
 
-  const {name, description, img, sandbox} = props.flashcard
+  const {name, description, imgAndUrl, sandbox} = props.flashcard
 
   return (
     <div >
@@ -39,7 +39,7 @@ export const FlashcardDetails = (props: {flashcard: Flashcard}) => {
         <div className={styles.cardContainer}>
           <div className={styles.imageContainer}>
             <Image
-              src={"/flashcards/"+img}
+              src={"/flashcards/"+imgAndUrl+".png"}
               alt="Your Name"
               layout="fill"
               className={styles.image}
