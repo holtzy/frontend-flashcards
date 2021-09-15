@@ -1,0 +1,17 @@
+.imageContainer {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.imageContainer>div {
+    position: unset !important;
+}
+.image {
+    object-fit: contain;
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px !important;
+}

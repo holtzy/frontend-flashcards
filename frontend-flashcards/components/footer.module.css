@@ -1,8 +1,70 @@
 .footer {
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-    text-align: right;
-    font-family: Virgil;
-    font-size: 12px;
+    background-color: white;
+    height: 300px;
+    padding-right: 10vw;
+    padding-left: 10vw;
 }
+.separator {
+    border: none;
+    height: 1px;
+    background-color: var(--grey-md);
+}
+
+
+
+
+
+.descriptionRow {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+.title {
+    font-family: Virgil;
+    color: var(--green-dark);
+    min-width: 250px;
+}
+.description {
+    max-width: 600px;
+    font-size: 16px;
+    color: var(--grey-dark)
+}
+
+
+
+
+.linksRow {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(136px,1fr));
+    grid-gap: 15px;
+    row-gap: 32px;
+}
+.linksTitle {
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 22px;
+}
+.link {
+    font-family: Roboto;
+    color: var(--black-dark);
+    display: block;
+    line-height: 25px;
+}
+
+
+
+.legalRow {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.legalText {
+    max-width: 600px;
+    font-size: 16px;
+    color: var(--grey-dark)
+}
+

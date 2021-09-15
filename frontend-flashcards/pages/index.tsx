@@ -8,7 +8,12 @@ import Settings from '../components/Settings';
 import styles from '../styles/Home.module.css';
 import { getRandomCardUrl } from '../utils/utils';
 import flashcardOverview from '../public/misc/flashcard-overview.png'
+import cssSyntax from '../public/flashcards/css-syntax.png'
+import cssDefinition from '../public/flashcards/css-definition.png'
+import tsNarrowing from '../public/flashcards/ts-narrowing-typeof.png'
+import cssPosition from '../public/flashcards/css-position.png'
 import Button from '../components/Button';
+import FullWidthImage from '../components/FullWidthImage';
 
 export default function Home() {
 
@@ -43,8 +48,14 @@ export default function Home() {
           setIsSettingsOpen={setIsSettingsOpen}
         />
       }
-      <Footer/>
 
+
+
+      {/*
+      ---
+      Section 1: Landing page
+      ---
+      */}
       <div className={styles.landingSection}>
 
         <div className={styles.titleContainer}>
@@ -122,6 +133,14 @@ export default function Home() {
         </div> */}
       </div>
 
+
+
+
+      {/*
+      ---
+      Section 2: languages
+      ---
+      */}
       <div className={styles.languageSection}>
         <h2>Flashcards are about developing for the web</h2>
         <div className={styles.cardsContainer}>
@@ -163,6 +182,58 @@ export default function Home() {
 
         </div>
       </div>
+
+      {/*
+      ---
+      Section 3: All cards
+      ---
+      */}
+      <div className={styles.allCardsSection}>
+        <h2><span className={styles.number}>234</span> Flashcards available</h2>
+        <div className={styles.flashcardsContainer}>
+          <div className={styles.flashcard}>
+            <FullWidthImage
+              src={"/flashcards/css-syntax.png"}
+              alt={"flashcard about CSS syntax vocabulary"}
+            />
+          </div>
+          <div className={styles.flashcard}>
+            <FullWidthImage
+              src={"/flashcards/ts-narrowing-typeof.png"}
+              alt={"flashcard about narrowing in typescript"}
+            />
+          </div>
+          <div className={styles.flashcard}>
+            <FullWidthImage
+              src={"/flashcards/css-position.png"}
+              alt={"flashcard about the position CSS property"}
+            />
+          </div>
+          <div className={styles.flashcard}>
+            <FullWidthImage
+              src={"/flashcards/css-definition.png"}
+              alt={"flashcard about what CSS is"}
+            />
+          </div>
+        </div>
+        <br/><br/>
+        <div>
+          <Button onClick={() => {}}>
+            <Link href="/">
+              Browse the full collection
+            </Link>
+          </Button>
+        </div>
+      </div>
+
+
+      {/*
+      ---
+      FOOTER
+      ---
+      */}
+      <Footer/>
+
     </div>
   );
 }
