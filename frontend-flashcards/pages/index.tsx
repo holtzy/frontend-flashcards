@@ -122,8 +122,46 @@ export default function Home() {
         </div> */}
       </div>
 
-      <div className={styles.firstSection}>
-        <p>next</p>
+      <div className={styles.languageSection}>
+        <h2>Flashcards are about developing for the web</h2>
+        <div className={styles.cardsContainer}>
+          <div className={styles.cards}>
+            <h3>CSS</h3>
+            <p>234 flashcards</p>
+            <p>CSS controls the style of a webpage. The flashcards cover basic
+              concepts like the position property to harder ones like animation.
+            </p>
+            <Button onClick={() => {}}>
+              <Link href="/">Browse</Link>
+            </Button>
+          </div>
+
+          <div className={styles.cards}>
+            <h3>Javascript</h3>
+            <p>34 flashcards</p>
+            <p>
+              Javascript makes the web an interactive place. Learn what a ternary operator is,
+              remember the various arrays methods and more.
+            </p>
+            <Button onClick={() => {}}>
+              <Link href="/">Browse</Link>
+            </Button>
+          </div>
+
+          <div className={styles.cards}>
+            <h3>Typescript</h3>
+            <p>131 flashcards</p>
+            <p>
+              Typescript makes your life easier by checking heaps of errors for you. It can be
+              seen as a struggle at the beginning, but mastering its core concepts will make your code
+              more error-prone.
+            </p>
+            <Button onClick={() => {}}>
+              <Link href="/">Browse</Link>
+            </Button>
+          </div>
+
+        </div>
       </div>
     </div>
   );

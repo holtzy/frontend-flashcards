@@ -34,10 +34,15 @@ p {
 }
 
 h1,
-h2,
 h3,
 h4 {
   font-family: Roboto;
+}
+
+h2 {
+  font-family: Roboto;
+  font-size: 33px;
+  font-weight: 200;
 }
 
 a {
