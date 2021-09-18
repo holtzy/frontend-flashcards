@@ -5,8 +5,27 @@
 .container {
     overflow: visible;
     height: 200px;
-    display: flex;
     max-width: var(--container-width);
     width: 90%;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.separator {
+    margin: 15px;
+    height: 1px;
+    background-color: var(--grey-dark);
+    width: 40px;
+}
+.allCardUnits {
+    max-width: 500px;
+}
+.cardUnitMain {
+    text-decoration: solid;
+    color: black;
+    opacity: 1;
+}
+.cardUnit {
+    display: inline-block;
+    color: var(--grey-dark);
 }

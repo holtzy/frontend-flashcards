@@ -1,5 +1,6 @@
 import styles from './relatedSection.module.css'
 import { flashcardList } from '../utils/flashcardList';
+import Pill from './Pill';
 
 export const RelatedSection = (props: {imgAndUrl: string}) => {
 
@@ -10,19 +11,35 @@ export const RelatedSection = (props: {imgAndUrl: string}) => {
   }
 
   const family = card.cardFamily
+  const familyLabel = family === "ts" ?
+    "Typescript" :
+    family === "js" ?
+      "Javascript" :
+      "css"
   const chapter = card.chapter
   const allCardsInChapter = flashcardList
     .filter(card => card.chapter === chapter)
     .map((card,i) => {
-      return(<p key={i}>{card.name}</p>)
+      return(
+        <span key={i} className={styles.cardUnit}>
+          <span
+            className={card.imgAndUrl === props.imgAndUrl
+              ? styles.cardUnitMain
+              : styles.cardUnit}
+          >{card.name}</span>
+          <span className={styles.separator}/>
+        </span>
+      )
     })
 
   return (
     <div className={styles.background}>
       <div className={styles.container}>
-        <p>{family}</p>
+        <Pill text={familyLabel} family={family}/>
+        <span className={styles.separator}/>
         <p>{chapter}</p>
-        <div>
+        <span className={styles.separator}/>
+        <div className={styles.allCardUnits}>
           {allCardsInChapter}
         </div>
       </div>
