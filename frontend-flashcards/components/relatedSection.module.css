@@ -1,0 +1,12 @@
+.background {
+    background-color: var(--pink-light);
+}
+
+.container {
+    overflow: visible;
+    height: 200px;
+    display: flex;
+    max-width: var(--container-width);
+    width: 90%;
+    margin: 0 auto;
+}

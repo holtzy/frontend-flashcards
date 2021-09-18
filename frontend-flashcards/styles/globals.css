@@ -4,6 +4,7 @@
 }
 
 :root {
+  --pink-light: #f8deec;
   --pink-md: #F91992;
 
   --purple-md: #6E82EE;
@@ -22,6 +23,8 @@
   --grey-light: #f8f9fa;
   --grey-md: #ebeff7;
   --grey-dark: #747c87;
+
+  --container-width: 1000px;
 }
 
 html,

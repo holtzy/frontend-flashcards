@@ -5,16 +5,17 @@ import Image from "next/image";
 import { Flashcard } from "../utils/types";
 import Footer from './Footer';
 import Navbar from './Navbar';
-import { useCallback, useState } from 'react';
-import { SandboxPanel } from './SandboxPanel';
+import { SandboxSection } from './SandboxSection';
+import { RelatedSection } from './RelatedSection';
 import { getRandomCardUrl } from '../utils/utils';
 import Link from 'next/link';
+import Pill from './Pill';
 
 const MIN_INSPECTOR_HEIGHT_THRESHOLD = 200;
 
 export const FlashcardDetails = (props: {flashcard: Flashcard}) => {
 
-  const {name, description, imgAndUrl, sandbox} = props.flashcard
+  const {name, description, imgAndUrl, sandbox, cardFamily, level} = props.flashcard
 
   return (
     <div >
@@ -32,6 +33,8 @@ export const FlashcardDetails = (props: {flashcard: Flashcard}) => {
       {/* Content */}
       <div className={styles.container}>
         <div className={styles.descriptionContainer}>
+          <Pill text={cardFamily} family={cardFamily}/>
+          <Pill text={"easy"} family={cardFamily}/>
           <h1 className={styles.title}>{name}</h1>
           <p className={styles.description}>{description}</p>
         </div>
@@ -54,7 +57,10 @@ export const FlashcardDetails = (props: {flashcard: Flashcard}) => {
         <div className={styles.arrowRight}>{"->"}</div>
       </Link>
 
-      <SandboxPanel url={sandbox}/>
+      <RelatedSection imgAndUrl={imgAndUrl}/>
+
+      <SandboxSection url={sandbox}/>
+
       <Footer/>
     </div >
   );

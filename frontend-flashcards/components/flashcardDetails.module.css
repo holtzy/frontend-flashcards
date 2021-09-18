@@ -1,14 +1,13 @@
 /* General layout */
 .container {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
+    height: 90vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content:space-evenly;
+    height: calc(90vh - 100px);
+    max-height: 800px;
+    background-color: var(--grey-light);
 }
 .descriptionContainer{
     width: 35%;
