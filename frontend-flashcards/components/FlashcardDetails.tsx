@@ -31,22 +31,24 @@ export const FlashcardDetails = (props: {flashcard: Flashcard}) => {
       />
 
       {/* Content */}
-      <div className={styles.container}>
-        <div className={styles.descriptionContainer}>
-          <Pill text={cardFamily} family={cardFamily}/>
-          <Pill text={"easy"} family={cardFamily}/>
-          <h1 className={styles.title}>{name}</h1>
-          <p className={styles.description}>{description}</p>
-        </div>
+      <div className={styles.background}>
+        <div className={styles.container}>
+          <div className={styles.descriptionContainer}>
+            <Pill text={cardFamily} family={cardFamily}/>
+            <Pill text={"easy"} family={cardFamily}/>
+            <h1 className={styles.title}>{name}</h1>
+            <p className={styles.description}>{description}</p>
+          </div>
 
-        <div className={styles.cardContainer}>
-          <div className={styles.imageContainer}>
-            <Image
-              src={"/flashcards/"+imgAndUrl+".png"}
-              alt="Your Name"
-              layout="fill"
-              className={styles.image}
-            />
+          <div className={styles.cardContainer}>
+            <div className={styles.imageContainer}>
+              <Image
+                src={"/flashcards/"+imgAndUrl+".png"}
+                alt="Your Name"
+                layout="fill"
+                className={styles.image}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -59,7 +61,7 @@ export const FlashcardDetails = (props: {flashcard: Flashcard}) => {
 
       <RelatedSection imgAndUrl={imgAndUrl}/>
 
-      <SandboxSection url={sandbox}/>
+      { sandbox && <SandboxSection url={sandbox}/>}
 
       <Footer/>
     </div >

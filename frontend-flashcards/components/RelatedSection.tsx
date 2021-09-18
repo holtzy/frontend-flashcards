@@ -7,7 +7,7 @@ export const RelatedSection = (props: {imgAndUrl: string}) => {
   const card = flashcardList.find(card => card.imgAndUrl === props.imgAndUrl)
 
   if(!card){
-    return
+    return null;
   }
 
   const family = card.cardFamily
