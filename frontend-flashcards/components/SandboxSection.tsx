@@ -10,10 +10,10 @@ export const SandboxSection = (props: {url: string}) => {
       <iframe src={props.url}
         style={{
           width: '100%',
-          height: 500,
+          height: 700,
           border: "solid",
-          borderWidth: 2,
-          borderRadius: '4px',
+          borderWidth: 0,
+          borderRadius: '0px',
           overflow: 'hidden'
         }}
         allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
