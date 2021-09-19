@@ -6,12 +6,17 @@
     max-width: var(--container-width);
     margin: 0 auto;
     width: 90%;
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content:space-between;
     height: calc(90vh - 100px);
     max-height: 800px;
+
+    position: relative;
+    animation-name: example;
+    animation-duration: .5s;
 }
 .descriptionContainer{
     width: 45%;
@@ -23,8 +28,21 @@
     justify-content: center;
     align-items: center;
 }
+@keyframes example {
+    from {left: 1000px;}
+    to {left: 0px;}
+}
 
 
+/* Small screens */
+@media screen and (max-width: 992px) {
+    .descriptionContainer {
+      display: none;
+    }
+    .cardContainer{
+        width: 100%;
+    }
+  }
 
 
 /* Left side: description */
@@ -39,7 +57,12 @@
     text-align: left;
     font-family: virgil;
 }
-
+.arrow {
+    font-size: 25px;
+    cursor: pointer;
+    color: black;
+    margin-right: 15px;
+}
 
 
 /* Right side: flashcard */

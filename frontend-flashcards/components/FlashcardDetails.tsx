@@ -11,8 +11,6 @@ import { getRandomCardUrl } from '../utils/utils';
 import Link from 'next/link';
 import Pill from './Pill';
 
-const MIN_INSPECTOR_HEIGHT_THRESHOLD = 200;
-
 export const FlashcardDetails = (props: {flashcard: Flashcard}) => {
 
   const {name, description, imgAndUrl, sandbox, cardFamily, level} = props.flashcard
@@ -38,6 +36,10 @@ export const FlashcardDetails = (props: {flashcard: Flashcard}) => {
             <Pill text={"easy"} family={cardFamily}/>
             <h1 className={styles.title}>{name}</h1>
             <p className={styles.description}>{description}</p>
+            <div>
+              <a href={getRandomCardUrl()} className={styles.arrow}>&larr;</a>
+              <a href={getRandomCardUrl()} className={styles.arrow}>&rarr;</a>
+            </div>
           </div>
 
           <div className={styles.cardContainer}>
@@ -52,12 +54,6 @@ export const FlashcardDetails = (props: {flashcard: Flashcard}) => {
           </div>
         </div>
       </div>
-
-      {/* Right and Left arrows */}
-      <div className={styles.arrowLeft}>{"<-"}</div>
-      <Link href={getRandomCardUrl()}>
-        <div className={styles.arrowRight}>{"->"}</div>
-      </Link>
 
       <RelatedSection imgAndUrl={imgAndUrl}/>
 

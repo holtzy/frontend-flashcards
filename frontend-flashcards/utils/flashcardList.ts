@@ -7,7 +7,7 @@ export const flashcardList: Flashcard[] = [
     keyWords: ["narrowing", "typeof", "coercion"],
     description: "The typeof javascript operator allows to determine the nature of a value. It can be used to determine...",
     cardFamily: "ts",
-    sandbox: "https://codesandbox.io/s/github/holtzy/frontend-flashcards/tree/main?file=/Sandbox/typescript/narrowing.ts",
+    sandbox: "https://codesandbox.io/embed/css-test-ixb4l?autoresize=1&expanddevtools=1&fontsize=14&moduleview=1&theme=dark",
     chapter: "narrowing",
     level: 2,
     documentation: "https://www.typescriptlang.org/docs/handbook/2/narrowing.html",
